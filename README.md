@@ -31,7 +31,7 @@ Accept: application/json
 
 ```
 //对医保卡余额进行更新
-POST localhost:18080/api/patient2s/update
+POST http://139.196.194.51:18081/api/patient2s/update
 content-type:application/json
 Accept: application/json
 
