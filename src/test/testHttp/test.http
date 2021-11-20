@@ -1,0 +1,15 @@
+GET localhost:18080/api/patient2s/all
+content-type:application/json
+Accept: application/json
+
+
+###
+
+POST localhost:18080/api/patient2s/update
+content-type:application/json
+Accept: application/json
+
+{
+  "id":"1214",
+  "economy":50
+}
