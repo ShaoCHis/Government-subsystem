@@ -1,4 +1,4 @@
-GET localhost:18080/api/patient2s/all
+GET http://139.196.194.51:18081/api/patients/all
 content-type:application/json
 Accept: application/json
 

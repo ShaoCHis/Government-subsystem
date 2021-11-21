@@ -1,5 +1,6 @@
-# Government-subsystem
+# Government-subsystem-SpringBoot
 WEB&amp;SOA Government subsystem
+持久层采用hibernate
 
 
 #### API调用实例
