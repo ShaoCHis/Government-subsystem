@@ -40,6 +40,15 @@ public class Patient2Controller {
     return Result.wrapSuccessfulResult(patient2s);
   }
 
+  @GetMapping(path = "/{id}")
+  public Result<Integer> getBalance(@PathVariable String id){
+    Optional<Patient2> patient2=patient2Repository.findById(id);
+    if(!patient2.isPresent()){
+      return Result.wrapErrorResult("Not exist!");
+    }
+    return Result.wrapSuccessfulResult(patient2.get().getBalance());
+  }
+
   @PostMapping(path = "/update")
   public Result<String> update(@RequestBody Economy body){
     Optional<Patient2> patient2=patient2Repository.findById(body.getId());

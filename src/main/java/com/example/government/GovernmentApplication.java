@@ -15,5 +15,8 @@ public class GovernmentApplication {
   }
   public static void main(String[] args) {
     SpringApplication.run(GovernmentApplication.class, args);
+//    //起socket服务
+//    SocketServer server = new SocketServer();
+//    server.startSocketServer(8088);
   }
 }

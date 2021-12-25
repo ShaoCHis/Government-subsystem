@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-POST localhost:18080/api/patient2s/update
+POST localhost:18081/api/patient2s/update
 content-type:application/json
 Accept: application/json
 
@@ -13,3 +13,9 @@ Accept: application/json
   "id":"1214",
   "economy":50
 }
+
+###
+
+GET localhost:18081/api/patient2s/1214
+content-type:application/json
+Accept: application/json

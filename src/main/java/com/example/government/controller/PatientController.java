@@ -6,6 +6,7 @@ package com.example.government.controller;
  */
 
 import com.example.government.model.Patient;
+import com.example.government.model.Patient2;
 import com.example.government.repository.PatientRepository;
 import com.example.government.utils.Result;
 import com.example.government.views.Economy;
@@ -38,6 +39,15 @@ public class PatientController {
       patient2s.add(new PatientInfo(patient2));
     }
     return Result.wrapSuccessfulResult(patient2s);
+  }
+
+  @GetMapping(path = "/{id}")
+  public Result<Integer> getBalance(@PathVariable String id){
+    Optional<Patient> patient=patientRepository.findById(id);
+    if(!patient.isPresent()){
+      return Result.wrapErrorResult("Not exist!");
+    }
+    return Result.wrapSuccessfulResult(patient.get().getBalance());
   }
 
   @PostMapping(path = "/update")
